@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            display: flex;
+            border: 2px solid black;
+            width: 900px;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+
+        }
+
+        .image img {
+            width: 200px;
+        }
+
+        .text h1,
+        p {
+            padding: 2px 0;
+        }
+
+        .image .capsul {
+            position: absolute;
+            bottom: 4px;
+            z-index: 10;
+            right: 5px;
+            background-color: gray;
+            opacity: 0.9;
+            color: white;
+            padding: 3px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="" alt="Thumbnail">
+                <div class="capsul">31.53</div>
+            </div>
+            <div class="text">
+                <h1>Introduction To Backend | Sigma Web Dev Video #2</h1>
+                <p>CodeWithHarry . 727K views . 2 month</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function createCard(title, cName, views, monthsOld, duration, thumbnail) {
+            let viewNumber
+            if (views < 100000) {
+                viewNumber = views / 1000 + "K";
+            }
+            else if (views > 1000000) {
+                viewNumber = views / 1000000 + "M";
+            }
+            else {
+                viewNumber = views / 1000 + "K"
+            }
+            let html = `<div class="card">
+        <div class="image">
+            <img src="${thumbnail}" alt="Thumbnail">
+            <div class="capsul">${duration}</div>
+        </div>
+        <div class="text">
+            <h1>${title}</h1>
+            <p>${cName} .  ${viewNumber} views . ${monthsOld} month</p>
+        </div>`
+        };
+        document.querySelector(".container").innerHTML = document.querySelector(".container").innerHTML + html
+
+        createCard("Farhan ka Card", "Scientist Farhan", 1000000000000000, 9, "52.53", 'https://i.ytimg.com/vi/CO_DAXswOrc/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAbDeaG5nlgOfmj0aGOejvuL6680Q')
+    </script>
+</body>
+
+</html>

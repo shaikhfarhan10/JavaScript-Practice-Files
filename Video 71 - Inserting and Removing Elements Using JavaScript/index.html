@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" style="border: 2px solid;">Hey I am a Box</div>
+    </div>
+    <script>
+        console.log(document.querySelector(".box"));
+        console.log(document.querySelector(".box").innerHTML);
+        console.log(document.querySelector(".container").innerHTML);
+        console.log(document.querySelector(".container").innerText);
+        console.log(document.querySelector(".container").outerHTML);
+        console.log(document.querySelector(".container").tagName);
+        console.log(document.querySelector(".container").nodeName);
+        console.log(document.querySelector(".container").textContent);
+        console.log(document.querySelector(".box").hasAttribute("style"));
+        console.log(document.querySelector(".box").getAttribute("style"));
+        console.log(document.querySelector(".box").setAttribute("style", "display: inline"));
+        console.log(document.querySelector(".box").attributes);
+        console.log(document.querySelector(".box").removeAttribute("style"));
+        
+    </script>
+</body>
+</html>

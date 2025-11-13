@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculating the Factorial</title>
+</head>
+
+<body>
+    <script>
+        let num = prompt("Enter a number:");
+        let arr = [];
+
+        for (let i = 0; i < num; i++) {
+            arr.push(i + 1);
+        }
+
+        const result = arr.reduce(myfunction);
+
+        function myfunction(total, value) {
+            return total * value;
+        }
+        alert(`The factorial of ${num} is: ${result}`);
+
+    </script>
+</body>
+
+</html>

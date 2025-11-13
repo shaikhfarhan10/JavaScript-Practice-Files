@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Color using DOM - Pracice Set 3</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .box{
+            align-content: center;
+            height: 30px;
+            width: 30px;
+            margin: 7px;
+            padding: 7px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+    <script>
+        let bholu = document.getElementsByClassName("box");
+        
+        function getRandomColor(){
+            let v1 = Math.ceil(0 + Math.random()* 500);
+            let v2 = Math.ceil(0 + Math.random()* 500);
+            let v3 = Math.ceil(0 + Math.random()* 500);
+            return `rgb(${v1}, ${v2}, ${v3})`
+        }
+        Array.from(bholu).forEach( element=> {
+            element.style.backgroundColor = getRandomColor();
+            element.style.color = getRandomColor();
+            console.log(element)
+        });
+    </script>
+</body>
+</html>
