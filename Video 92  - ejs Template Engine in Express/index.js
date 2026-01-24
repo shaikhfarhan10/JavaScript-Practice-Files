@@ -7,7 +7,8 @@ app.set("view engine", "ejs")
 app.get('/', (req, res) => {
     let siteName = "Adidas"
     let searchText = "Search Now"
-    res.render("index", { siteName: siteName, searchText: searchText })
+    let arr = [7, 10, 11, 29]
+    res.render("index", { siteName: siteName, searchText: searchText, arr })
 })
 
 app.get('/blog/:slug', (req, res) => {
